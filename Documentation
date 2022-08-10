@@ -1,0 +1,18 @@
+Database is create on port 8080 on localhost
+Base used is h2
+The JDBC URL is: jdbc:h2:mem:testdb
+User Name: sa
+User password:
+Endpoints
+
+GET         /album - get all albums
+GET         /album/id - get album on specified id
+POST        /album - create new album by specified information in JSON in @RequestBody
+PUT         /album/id - updated album on specified id by specified information in @RequestBody
+DELETE      /album/id - delete album on specified id
+
+GET         /track - get all tracks
+GET         /track/id - get track on specified id
+POST        /track - create new track by specified information in JSON in @RequestBody
+PUT         /track/id - updated track on specified id by specified information in @RequestBody
+DELETE      /track/id - delete track on specified id
