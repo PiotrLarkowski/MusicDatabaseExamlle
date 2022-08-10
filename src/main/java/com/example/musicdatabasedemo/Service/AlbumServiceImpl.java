@@ -30,9 +30,10 @@ public class AlbumServiceImpl implements AlbumServiceInter{
     public List<AlbumDto> getAllAlbum() {
         return albumRepository.findAll().stream()
                 .map(album -> new AlbumDto(album.getAlbumId(), album.getAlbomTitle(), album.getAlbumRelaseDate(),
-                        album.getTracksList().stream()
-                                .map(track -> new TrackDto(track.getTrackId(),track.getTrackName(),track.getTrackLong(),
-                                        track.getAlbum().getAlbomTitle())).collect(Collectors.toList())))
+                album.getTracksList().stream().map(track -> new TrackDto(track.getTrackId(),track.getTrackName()
+                ,track.getTrackLong(),track.getAlbum().getAlbomTitle())).collect(Collectors.toList()),
+                album.getTracks2List().stream().map(track -> new TrackDto(track.getTrackId(),track.getTrackName()
+                ,track.getTrackLong(),track.getAlbum().getAlbomTitle())).collect(Collectors.toList())))
                 .collect(Collectors.toList());
     }
 

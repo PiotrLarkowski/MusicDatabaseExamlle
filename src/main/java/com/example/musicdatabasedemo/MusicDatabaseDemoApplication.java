@@ -48,7 +48,6 @@ public class MusicDatabaseDemoApplication implements CommandLineRunner {
         for (int i = 0; i < 11; i++) {
             Track track = new Track(UUID.randomUUID().toString(),listOfTracksName.get(i),listOfTracksLong.get(i),albumRepository.MAIN_ALBUM);
             listOfTracks.add(track);
-            trackRepository.save(track);
         }
         albumRepository.MAIN_ALBUM.setTracksList(listOfTracks);
         System.out.println("List 1 of tracks have been made");
@@ -64,7 +63,6 @@ public class MusicDatabaseDemoApplication implements CommandLineRunner {
         }
         albumRepository.MAIN_ALBUM.setTracks2List(listOfTracks);
         System.out.println("List 2 of tracks have been made");
-
     }
     private void createMainAlbum() {
         System.out.println("Create Main album...");
