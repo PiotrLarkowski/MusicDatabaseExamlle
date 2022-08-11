@@ -3,6 +3,7 @@ package com.example.musicdatabasedemo.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -19,7 +20,7 @@ public class Track {
 
     private String trackLong;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Album album;
 
     public Track() {

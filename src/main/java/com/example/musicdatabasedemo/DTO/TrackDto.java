@@ -1,6 +1,5 @@
 package com.example.musicdatabasedemo.DTO;
 
-import com.example.musicdatabasedemo.Entity.Album;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

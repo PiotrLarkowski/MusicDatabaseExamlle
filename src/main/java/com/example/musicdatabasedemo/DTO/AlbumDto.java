@@ -1,6 +1,6 @@
 package com.example.musicdatabasedemo.DTO;
 
-import com.example.musicdatabasedemo.Entity.Track;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -16,6 +16,7 @@ public class AlbumDto {
     private String albumTitle;
 
     private LocalDateTime albumRelaseDate;
+
 
     private List<TrackDto> TrackDtoList;
 

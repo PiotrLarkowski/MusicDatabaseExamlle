@@ -1,7 +1,6 @@
 package com.example.musicdatabasedemo.Repozytorium;
 
 import com.example.musicdatabasedemo.Entity.Album;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;
